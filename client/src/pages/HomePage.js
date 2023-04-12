@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
+import image from './images/My project.jpg'
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -106,17 +107,18 @@ const HomePage = () => {
       console.log(error);
     }
   };
+  console.log()
   return (
-    <Layout title={"ALl Products - Best offers "}>
+    <Layout title={"All Products - Best offers "}>
       {/* banner image */}
       <img
-        src="/images/banner.png"
+        src={image}
         className="banner-img"
         alt="bannerimage"
         width={"100%"}
       />
       {/* banner image */}
-      <div className="container-fluid row mt-3 home-page">
+      <div className="container-fluid row mt-3 home-page new">
         <div className="col-md-3 filters">
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
@@ -159,6 +161,7 @@ const HomePage = () => {
                   className="card-img-top"
                   alt={p.name}
                 />
+                {console.log(p.photo)}
                 <div className="card-body">
                   <div className="card-name-price">
                     <h5 className="card-title">{p.name}</h5>
